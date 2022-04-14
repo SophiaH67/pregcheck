@@ -36,7 +36,7 @@ export default async (req: Request, res: Response) => {
 
   // Check if user is in guild with id "842375042972385320"
   const inGuild = guilds.some(
-    (g: { id: string }) => g.id === "842375042972385320"
+    (g: { id: string }) => g.id === "880994977402990663"
   );
   if (inGuild) {
     authSuccess(req);
