@@ -25,6 +25,7 @@ app.use(
     store: new RedisStore({ client: redisClient }),
     resave: true,
     saveUninitialized: false,
+    cookie: { domain: process.env.COOKIE_DOMAIN || "localhost" },
   })
 );
 
