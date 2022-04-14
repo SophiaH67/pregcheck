@@ -7,6 +7,6 @@ export default (req: Request, res: Response) => {
     authSuccess(req);
     res.send("OK");
   } else {
-    res.send("FAIL").status(401);
+    res.status(401).send("FAIL");
   }
 };
