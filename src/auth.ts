@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 
 export const isAuthenticated = (req: Request) => {
-  const lastAuth = req.session?.lastAuth;
+  const lastAuth = req.session.lastAuth;
   if (!lastAuth) {
     return false;
   }
