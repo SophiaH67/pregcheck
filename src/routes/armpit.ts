@@ -20,13 +20,6 @@ export default async (req: Request, res: Response) => {
     return;
   }
 
-  // Get person from discord
-  const user = await fetch("https://discord.com/api/users/@me", {
-    headers: {
-      Authorization: `${tokenType} ${accessToken}`,
-    },
-  }).then((res) => res.json());
-
   // Get server list from discord
   const guilds = await fetch("https://discord.com/api/users/@me/guilds", {
     headers: {
@@ -34,7 +27,7 @@ export default async (req: Request, res: Response) => {
     },
   }).then((res) => res.json());
 
-  // Check if user is in guild with id "842375042972385320"
+  // Check if user is in guild with id "880994977402990663"
   const inGuild = guilds.some(
     (g: { id: string }) => g.id === "880994977402990663"
   );
