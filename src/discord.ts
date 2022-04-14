@@ -20,8 +20,7 @@ export const getAccessToken = async (code: string) => {
       code,
       grant_type: "authorization_code",
       redirect_uri: redirectURL,
-      scope:
-        "identify email connections guilds guilds.join guilds.members.read gdm.join messages.read",
+      scope: "identify guilds",
     }),
   });
   const json = await oauthResult.json();

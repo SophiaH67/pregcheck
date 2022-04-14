@@ -4,8 +4,7 @@ const params = {
   client_id: process.env.DISCORD_CLIENT_ID,
   redirect_uri: process.env.DISCORD_CALLBACK_URL,
   response_type: "code",
-  scope:
-    "identify email connections guilds guilds.join guilds.members.read gdm.join messages.read",
+  scope: "identify guilds",
 };
 const redirectURL =
   `https://discord.com/api/oauth2/authorize?` +
